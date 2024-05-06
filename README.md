@@ -33,6 +33,7 @@ This module processes streaming assets.
         - `set<str> ls`: Unused.
     - Return value:
         - `void`: None.
+ - Usage: `arc.py c .\out .\src`
 
 ## net.py ##
 This module processes raw payloads from the server responses.
