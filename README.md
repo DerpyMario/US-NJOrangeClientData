@@ -1,6 +1,6 @@
 
 # Introduction #
-This is a python library for processing game archives from the **OrangeClient**.
+This is a python library for processing game archives from the **NJOrangeClient**.
 
 # Modules #
 
