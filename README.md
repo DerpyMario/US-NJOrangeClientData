@@ -2,6 +2,11 @@
 # Introduction #
 This is a python library for processing game archives from the **NJOrangeClient**.
 
+# Dependency #
+You would be able to install all dependency via `pip install -r requirements.txt`.
+
+=================================================================================
+
 # Modules #
 
 ## arc.py ##
