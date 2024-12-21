@@ -404,7 +404,7 @@ class CddLdr(ExtLdr):
     
 # =============================================================================
 PROTOCOL = "http"
-ORIGIN = "rmcdn.sail2world.com/us/"
+ORIGIN = "rockman-cdn.nebulajoy.com/cn/"
 DOMAIN = "%s://%s/" % (PROTOCOL, ORIGIN)
 
 gHdr = {
@@ -462,19 +462,19 @@ def procCrawl(dst, src, ldr = None, ls = None):
     os.makedirs(src, exist_ok = True)
     os.makedirs(dst, exist_ok = True)
     for t in [
-        _run(AbcLdr("abconfig").crawl, dst, src, DOMAIN + "download14/orange/2/AssetBundlesEncrypt/Android/", gHdr),
-        _run(AfiLdr("audiofileinfo").crawl, dst, src, DOMAIN + "download14/orange/2/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(JsonLdr("localizationfileinfo").crawl, dst, src, DOMAIN + "download14/orange/2/Localization/", gHdr),
-        _run(JsonLdr("RelayParam").crawl, dst, src, DOMAIN + "download14/orange/2/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(CddLdr("GameData.bin", DOMAIN + "download14/orange/2/Designs/OrangeData.bin").crawl, dst, src, DOMAIN + "download14/orange/2/Designs/", gHdr),
-        _run(CddLdr("TextData.bin", DOMAIN + "download14/orange/2/Designs/OrangeTextData.bin").crawl, dst, src, DOMAIN + "download14/orange/2/Designs/", gHdr),
-        _run(CddLdr("ExGameData.bin", DOMAIN + "download8/orange/ExOrangeData.bin").crawl, dst, src, DOMAIN, gHdr),
-        _run(CddLdr("ExTextData.bin", DOMAIN + "download8/orange/ExOrangeTextData.bin").crawl, dst, src, DOMAIN, gHdr),
+        _run(AbcLdr("abconfig").crawl, dst, src, DOMAIN + "orange//1/AssetBundlesEncrypt/Android/", gHdr),
+        _run(AfiLdr("audiofileinfo").crawl, dst, src, DOMAIN + "orange//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(JsonLdr("localizationfileinfo").crawl, dst, src, DOMAIN + "orange//1/Localization/", gHdr),
+        _run(JsonLdr("RelayParam").crawl, dst, src, DOMAIN + "orange//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(CddLdr("GameData.bin", DOMAIN + "orange//1/Designs/OrangeData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
+        _run(CddLdr("TextData.bin", DOMAIN + "orange//1/Designs/OrangeTextData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
+        _run(CddLdr("ExGameData.bin", DOMAIN + "orange//ExOrangeData.bin").crawl, dst, src, DOMAIN, gHdr),
+        _run(CddLdr("ExTextData.bin", DOMAIN + "orange//ExOrangeTextData.bin").crawl, dst, src, DOMAIN, gHdr),
         _run(JsonLdr("us.14.1.and.bin").crawl, dst, src, DOMAIN, gHdr),
-        _run(NullLdr("forbiddenInfo.json").crawl, dst, src, DOMAIN + "download14/orange/2/Designs/", gHdr),
-        _run(NullLdr("ORANGE_SOUND.acf").crawl, dst, src, DOMAIN + "download14/orange/2/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(NullLdr("Android").crawl, dst, src, DOMAIN + "download14/orange/2/AssetBundlesEncrypt/Android/", gHdr),
-        _run(NullLdr("Android.manifest").crawl, dst, src, DOMAIN + "download14/orange/2/AssetBundlesEncrypt/Android/", gHdr)
+        _run(NullLdr("forbiddenInfo.json").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
+        _run(NullLdr("ORANGE_SOUND.acf").crawl, dst, src, DOMAIN + "orange//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(NullLdr("Android").crawl, dst, src, DOMAIN + "orange//1/AssetBundlesEncrypt/Android/", gHdr),
+        _run(NullLdr("Android.manifest").crawl, dst, src, DOMAIN + "orange//1/AssetBundlesEncrypt/Android/", gHdr)
     ]: t.join()
 
 if __name__ == "__main__":
