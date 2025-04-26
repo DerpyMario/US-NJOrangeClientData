@@ -470,7 +470,7 @@ def procCrawl(dst, src, ldr = None, ls = None):
         _run(CddLdr("TextData.bin", DOMAIN + "cbt2//1/Designs/OrangeTextData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
         _run(CddLdr("ExGameData.bin", DOMAIN + "cbt2//ExOrangeData.bin").crawl, dst, src, DOMAIN, gHdr),
         _run(CddLdr("ExTextData.bin", DOMAIN + "cbt2//ExOrangeTextData.bin").crawl, dst, src, DOMAIN, gHdr),
-        _run(JsonLdr("cn.1.0.2.bin").crawl, dst, src, DOMAIN, gHdr),
+        _run(JsonLdr("cn.1.0.3.bin").crawl, dst, src, DOMAIN, gHdr),
         _run(NullLdr("forbiddenInfo.json").crawl, dst, src, DOMAIN + "cbt2//1/Designs/", gHdr),
         _run(NullLdr("ORANGE_SOUND.acf").crawl, dst, src, DOMAIN + "cbt2//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
         _run(NullLdr("Android").crawl, dst, src, DOMAIN + "cbt2//1/AssetBundlesEncrypt/Android/", gHdr),
