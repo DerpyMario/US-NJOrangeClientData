@@ -462,19 +462,19 @@ def procCrawl(dst, src, ldr = None, ls = None):
     os.makedirs(src, exist_ok = True)
     os.makedirs(dst, exist_ok = True)
     for t in [
-        _run(AbcLdr("abconfig").crawl, dst, src, DOMAIN + "cbt2//1/AssetBundlesEncrypt/Android/", gHdr),
-        _run(AfiLdr("audiofileinfo").crawl, dst, src, DOMAIN + "cbt2//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(JsonLdr("localizationfileinfo").crawl, dst, src, DOMAIN + "cbt2//1/Localization/", gHdr),
-        _run(JsonLdr("RelayParam").crawl, dst, src, DOMAIN + "cbt2//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(CddLdr("GameData.bin", DOMAIN + "cbt2//1/Designs/OrangeData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
-        _run(CddLdr("TextData.bin", DOMAIN + "cbt2//1/Designs/OrangeTextData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
-        _run(CddLdr("ExGameData.bin", DOMAIN + "cbt2//ExOrangeData.bin").crawl, dst, src, DOMAIN, gHdr),
-        _run(CddLdr("ExTextData.bin", DOMAIN + "cbt2//ExOrangeTextData.bin").crawl, dst, src, DOMAIN, gHdr),
+        _run(AbcLdr("abconfig").crawl, dst, src, DOMAIN + "obt//1/AssetBundlesEncrypt/Android/", gHdr),
+        _run(AfiLdr("audiofileinfo").crawl, dst, src, DOMAIN + "obt//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(JsonLdr("localizationfileinfo").crawl, dst, src, DOMAIN + "obt//1/Localization/", gHdr),
+        _run(JsonLdr("RelayParam").crawl, dst, src, DOMAIN + "obt//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(CddLdr("GameData.bin", DOMAIN + "obt//1/Designs/OrangeData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
+        _run(CddLdr("TextData.bin", DOMAIN + "obt//1/Designs/OrangeTextData.bin").crawl, dst, src, DOMAIN + "orange//1/Designs/", gHdr),
+        _run(CddLdr("ExGameData.bin", DOMAIN + "obt//ExOrangeData.bin").crawl, dst, src, DOMAIN, gHdr),
+        _run(CddLdr("ExTextData.bin", DOMAIN + "obt//ExOrangeTextData.bin").crawl, dst, src, DOMAIN, gHdr),
         _run(JsonLdr("cn.1.0.3.bin").crawl, dst, src, DOMAIN, gHdr),
-        _run(NullLdr("forbiddenInfo.json").crawl, dst, src, DOMAIN + "cbt2//1/Designs/", gHdr),
-        _run(NullLdr("ORANGE_SOUND.acf").crawl, dst, src, DOMAIN + "cbt2//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
-        _run(NullLdr("Android").crawl, dst, src, DOMAIN + "cbt2//1/AssetBundlesEncrypt/Android/", gHdr),
-        _run(NullLdr("Android.manifest").crawl, dst, src, DOMAIN + "cbt2//1/AssetBundlesEncrypt/Android/", gHdr)
+        _run(NullLdr("forbiddenInfo.json").crawl, dst, src, DOMAIN + "obt//1/Designs/", gHdr),
+        _run(NullLdr("ORANGE_SOUND.acf").crawl, dst, src, DOMAIN + "obt//1/CriWare/Android/Assets/StreamingAssets/", gHdr),
+        _run(NullLdr("Android").crawl, dst, src, DOMAIN + "obt//1/AssetBundlesEncrypt/Android/", gHdr),
+        _run(NullLdr("Android.manifest").crawl, dst, src, DOMAIN + "obt//1/AssetBundlesEncrypt/Android/", gHdr)
     ]: t.join()
 
 if __name__ == "__main__":
